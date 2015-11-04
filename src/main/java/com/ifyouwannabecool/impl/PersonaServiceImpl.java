@@ -13,9 +13,9 @@ import javax.ws.rs.Path;
 public class PersonaServiceImpl implements PersonaService {
 
   public Persona readPersona(String personaId) {
-    Persona persona = new Persona();
+    Persona.PersonaBuilder personaBuilder = Persona.builder();
     //...load the persona from the db, etc...
-    return persona;
+    return personaBuilder.build();
   }
 
   public void storePersona(Persona persona) {
