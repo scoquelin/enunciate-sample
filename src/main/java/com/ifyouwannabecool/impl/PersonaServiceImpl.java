@@ -3,6 +3,7 @@ package com.ifyouwannabecool.impl;
 import com.ifyouwannabecool.api.PermissionDeniedException;
 import com.ifyouwannabecool.api.PersonaService;
 import com.ifyouwannabecool.domain.persona.Persona;
+import com.ifyouwannabecool.domain.persona.Persona.PersonaBuilder;
 
 import javax.ws.rs.Path;
 
@@ -13,7 +14,7 @@ import javax.ws.rs.Path;
 public class PersonaServiceImpl implements PersonaService {
 
   public Persona readPersona(String personaId) {
-    Persona.PersonaBuilder personaBuilder = Persona.builder();
+    PersonaBuilder personaBuilder = Persona.builder();
     //...load the persona from the db, etc...
     return personaBuilder.build();
   }
